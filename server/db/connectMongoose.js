@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
+import { databaseURI } from "../config/config.js";
 
 export const connectDB = async () => {
   await mongoose
-    .connect(
-      `mongodb+srv://lazyfox916:lms-n9@lms-n9.x4ejl.mongodb.net/?retryWrites=true&w=majority&appName=lms-n9`
-    )
+    .connect(databaseURI)
     .then(() => console.log("MongoDB connected..."));
 };

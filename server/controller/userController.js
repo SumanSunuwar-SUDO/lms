@@ -1,4 +1,4 @@
-import { User } from "../models/userSchema";
+import { User } from "../models/userSchema.js";
 import bcrypt from "bcrypt";
 
 export const createUserController = async (req, res, next) => {
@@ -15,6 +15,7 @@ export const createUserController = async (req, res, next) => {
     res.status(201).json({
       success: true,
       message: "User has been created successfully",
+      data: user,
     });
   } catch (error) {
     res.status(404).json({
