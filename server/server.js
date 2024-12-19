@@ -1,8 +1,8 @@
 import express, { json } from "express";
-import { connectDB } from "./db/connectMongoose.js";
-import { userRouter } from "./routes/userRouter.js";
-import { courseRouter } from "./routes/courseRouter.js";
 import cors from "cors";
+import { connectDB } from "./src/db/connectMongoose.js";
+import { userRouter } from "./src/routes/userRouter.js";
+import { courseRouter } from "./src/routes/courseRouter.js";
 
 const server = express();
 const port = 1111;
