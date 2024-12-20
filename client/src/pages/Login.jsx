@@ -16,6 +16,8 @@ const Login = () => {
         data: data,
       });
       console.log(result);
+      setEmail("");
+      setPassword("");
     } catch (error) {
       console.log(error);
     }

@@ -31,7 +31,7 @@ const courseSchema = new mongoose.Schema({
   },
   students: [{ type: mongoose.Schema.ObjectId, ref: "User" }],
   assignments: [{ type: mongoose.Schema.ObjectId, ref: "Assignment" }],
-  quizs: [{ type: mongoose.Schema.ObjectId, ref: "Quiz" }],
+  quiz: [{ type: mongoose.Schema.ObjectId, ref: "Quiz" }],
 });
 
 export const Course = mongoose.model("Course", courseSchema);
