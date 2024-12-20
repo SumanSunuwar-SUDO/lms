@@ -83,25 +83,17 @@ export const loginUserController = async (req, res, next) => {
     let password = req.body.password;
     const user = await User.findOne({ email: email });
     if (!user) {
-      res.status(404).json({
-        message: "User not found",
-      });
+      throw new Error("Invalid Credentials");
     }
 
     if (user.isVerified === false) {
-      res.status(400).json({
-        success: false,
-        message: "Invalid Credentials",
-      });
+      throw new Error("Invalid Credentials");
     }
 
     let isValidPassword = await bcrypt.compare(password, user.password);
 
     if (!isValidPassword) {
-      res.status(400).json({
-        success: false,
-        message: "Invalid Credentials",
-      });
+      throw new Error("Invalid Credentials");
     }
 
     let infoObj = {
@@ -120,7 +112,7 @@ export const loginUserController = async (req, res, next) => {
       token: token,
     });
   } catch (error) {
-    res.status(400).json({
+    res.status(405).json({
       success: false,
       message: error.message,
     });

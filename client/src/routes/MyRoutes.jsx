@@ -1,14 +1,14 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-
-const myRoutes = () => {
+import { Routes, Route } from "react-router-dom";
+import Login from "../pages/Login";
+const MyRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/login" element={<div>Hi</div>}></Route>
+        <Route path={"/login"} element={<Login />}></Route>
       </Routes>
     </div>
   );
 };
 
-export default myRoutes;
+export default MyRoutes;
