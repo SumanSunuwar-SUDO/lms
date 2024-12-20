@@ -1,13 +1,13 @@
 import nodemailer from "nodemailer";
+import { email, password } from "../config/config.js";
 
 let transporterInfo = {
   host: "smtp.gmail.com",
   port: 587,
   secure: false,
   auth: {
-    //NOte: user and pass must be genuine
-    user: "sunuwarsuman436@gmail.com",
-    pass: "rmfh kzpy ewnh flmk",
+    user: email,
+    pass: password,
   },
 };
 
@@ -15,6 +15,7 @@ export const sendEmail = async (mailInfo) => {
   try {
     let transporter = nodemailer.createTransport(transporterInfo);
     let info = await transporter.sendMail(mailInfo);
+    console.log("Email sent");
   } catch (error) {
     console.log("error is occured", error.message);
   }
