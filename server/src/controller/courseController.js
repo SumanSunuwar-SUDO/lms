@@ -18,6 +18,7 @@ export const getAllCourseController = async (req, res, next) => {
   }
 };
 
+
 export const addCourseCurriculumController = async (req, res, next) => {
   const { id, title, content } = req.body;
 
