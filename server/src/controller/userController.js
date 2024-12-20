@@ -33,7 +33,7 @@ export const createUserController = async (req, res, next) => {
       <p>You have successfully registered for our platform. Please click on below button to verify its you.</p>
       <br />
       <center>
-      <a href="http://locahost:5173/verify?token=${token}">
+      <a href="http://localhost:5173/verify?token=${token}">
       <button>Click Me</button>
       </a>
       </center>
