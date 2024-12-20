@@ -2,25 +2,27 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState();
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { email, password };
     try {
+      const data = { username, email, password, phoneNumber };
+
       let result = await axios({
-        url: `http://localhost:1111/user/login`,
+        url: "http://localhost:1111/user/add",
         method: "POST",
         data: data,
       });
-
+      setUsername("");
       setEmail("");
       setPassword("");
-    } catch (error) {
-      console.log(error);
-    }
+      setPhoneNumber("");
+    } catch (error) {}
   };
 
   return (
@@ -28,16 +30,25 @@ const Login = () => {
       <section className="login-section">
         <div className="login-div">
           <span className="px-4">
-            <h1 className="text-xl font-semibold">LOGIN</h1>
+            <h1 className="text-xl font-semibold">SIGN UP</h1>
             <span className="text-[14px] font-medium flex justify-between">
-              <p>SIGN IN YOUR ACCOUNT</p>
-              <Link className="text-blue-500" to={"/signup"}>
-                Sign Up
+              <p>Already a member?</p>
+              <Link className="text-blue-500" to={"/login"}>
+                Log In
               </Link>
             </span>
           </span>
         </div>
         <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Username"
+            className="form-input"
+            value={username}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+          />
           <input
             type="email"
             placeholder="Your e-mail"
@@ -56,16 +67,22 @@ const Login = () => {
               setPassword(e.target.value);
             }}
           />
+          <input
+            type="number"
+            placeholder="Phone number"
+            className="form-input"
+            value={phoneNumber}
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
+          />
           <button type="submit" className="form-button">
-            Login
+            Signup
           </button>
-          <NavLink className={"self-center text-slate-400"}>
-            Forget Password?
-          </NavLink>
         </form>
       </section>
     </main>
   );
 };
 
-export default Login;
+export default Signup;
