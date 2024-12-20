@@ -1,0 +1,13 @@
+{
+  "questions": {
+    "text": "What is express?",
+    "options": [
+      { "text": "Library", "isCorrect": false },
+      { "text": "Framework", "isCorrect": false },
+      { "text": "Mongo Express React Node", "isCorrect": true },
+      { "text": "Rome", "isCorrect": false }
+    ],
+    "order": 3,
+    "explanation": "This is the full form of MERN stack"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "topic": "MERN Stack",
+  "questions": [
+    {
+      "text": "What is mern Stack?",
+      "options": [
+        { "text": "Mongo", "isCorrect": false },
+        { "text": "Express", "isCorrect": false },
+        { "text": "Mongo Express React Node", "isCorrect": true },
+        { "text": "Rome", "isCorrect": false }
+      ],
+      "order": 1,
+      "explanation": "This is the full form of MERN stack"
+    },
+    {
+      "text": "What is the framework we use for front end?",
+      "options": [
+        { "text": "Express", "isCorrect": false },
+        { "text": "React", "isCorrect": true },
+        { "text": "Mongo", "isCorrect": false },
+        { "text": "Node js", "isCorrect": false }
+      ],
+      "order": 2,
+      "explanation": "React is the framework we use in frontend."
+    }
+  ]
+}
