@@ -13,19 +13,19 @@ const curriculumSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  videoUrl: {
-    type: String,
-    required: true,
-  },
+
   content: [
     {
-      question: {
+      header: {
         type: String,
         required: true,
       },
       context: {
         type: String,
         required: true,
+      },
+      videoUrl: {
+        type: String,
       },
     },
   ],
