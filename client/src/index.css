@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form {
+  @apply flex flex-col gap-4 px-5 py-5;
+}
+
+.form-input {
+  @apply h-[40px] border border-black rounded-md px-4;
+}
+
+.form-button {
+  @apply h-[35px] w-[100px] bg-slate-500 self-center text-white rounded-md;
+}
+
+.login-main {
+  @apply flex flex-col justify-center items-center h-screen px-3;
+}
+
+.login-section {
+  @apply flex flex-col justify-center shadow-xl w-[400px];
+}
+
+.login-div {
+  @apply flex flex-col justify-center py-5 border border-transparent border-b-gray-300;
+}
