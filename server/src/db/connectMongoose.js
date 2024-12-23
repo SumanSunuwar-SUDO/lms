@@ -3,6 +3,6 @@ import { databaseURI } from "../config/config.js";
 
 export const connectDB = async () => {
   await mongoose
-    .connect("mongodb://localhost:27017/lms")
+    .connect(databaseURI)
     .then(() => console.log("MongoDB connected..."));
 };
