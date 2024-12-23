@@ -1,18 +1,20 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Loader from "../ui/Loader";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isLoading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const data = { username, email, password, phoneNumber };
-
+      setLoading(true);
       let result = await axios({
         url: "http://localhost:1111/user/add",
         method: "POST",
@@ -22,7 +24,14 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setPhoneNumber("");
-    } catch (error) {}
+      setLoading(false);
+    } catch (error) {
+      setUsername("");
+      setEmail("");
+      setPassword("");
+      setPhoneNumber("");
+      setLoading(false);
+    }
   };
 
   return (
@@ -31,7 +40,7 @@ const Signup = () => {
         <div className="login-div">
           <span className="px-4">
             <h1 className="text-xl font-semibold">SIGN UP</h1>
-            <span className="text-[14px] font-medium flex justify-between">
+            <span className="text-[14px] font-normal text-gray-500 flex justify-between">
               <p>Already a member?</p>
               <Link className="text-blue-500" to={"/login"}>
                 Log In
@@ -77,7 +86,7 @@ const Signup = () => {
             }}
           />
           <button type="submit" className="form-button">
-            Signup
+            {isLoading ? <Loader /> : "Signup"}
           </button>
         </form>
       </section>

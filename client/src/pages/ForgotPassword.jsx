@@ -1,32 +1,24 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Loader from "../ui/Loader";
 
-const Login = () => {
+const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [isLoading, setLoading] = useState(false);
-  const navigate = useNavigate();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { email, password };
+    const data = { email };
     setLoading(true);
     try {
       let result = await axios({
-        url: `http://localhost:1111/user/login`,
+        url: "http://localhost:1111/user/forgot-password",
         method: "POST",
         data: data,
       });
-
       setEmail("");
-      setPassword("");
       setLoading(false);
-      navigate("/profile");
     } catch (error) {
-      setEmail("");
-      setPassword("");
       setLoading(false);
     }
   };
@@ -36,12 +28,9 @@ const Login = () => {
       <section className="login-section">
         <div className="login-div">
           <span className="px-4">
-            <h1 className="text-xl font-semibold">LOGIN</h1>
+            <h1 className="text-xl font-semibold">Forgot your password?</h1>
             <span className="text-[14px] font-normal text-gray-500 flex justify-between">
-              <p>SIGN IN YOUR ACCOUNT</p>
-              <Link className="text-blue-500" to={"/signup"}>
-                Sign Up
-              </Link>
+              <p>Please enter the email you use to sign in</p>
             </span>
           </span>
         </div>
@@ -55,23 +44,12 @@ const Login = () => {
               setEmail(e.target.value);
             }}
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className="form-input"
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
+
           <button type="submit" className="form-button">
-            {isLoading ? <Loader /> : "Login"}
+            {isLoading ? <Loader /> : "Reset Password"}
           </button>
-          <NavLink
-            to={"/forgot-password"}
-            className={"self-center text-slate-400"}
-          >
-            Forgot Password?
+          <NavLink to={"/signup"} className={"self-center text-slate-400"}>
+            Back to Sign in
           </NavLink>
         </form>
       </section>
@@ -79,4 +57,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;
