@@ -3,8 +3,6 @@ import cors from "cors";
 import { userRouter } from "./src/routes/userRouter.js";
 import { courseRouter } from "./src/routes/courseRouter.js";
 import { curriculumRouter } from "./src/routes/curriculumRouter.js";
-import { quizRouter } from "./src/routes/quizRouter.js";
-import { connectDB } from "./src/db/connectMongoose.js";
 
 const server = express();
 const port = 1111;
