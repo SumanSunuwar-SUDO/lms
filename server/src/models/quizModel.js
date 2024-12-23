@@ -13,6 +13,7 @@ const quizSchema = new mongoose.Schema({
         options: [{
             text: {
                 type: String,
+                unique: true,
                 required: true
             },
             isCorrect: {
@@ -39,7 +40,7 @@ const quizSchema = new mongoose.Schema({
         type: Date,
         onUpdate: Date.now
     }
-})
+}, { timestamps: true })
 
 
 export const Quiz = mongoose.model('Quiz', quizSchema);

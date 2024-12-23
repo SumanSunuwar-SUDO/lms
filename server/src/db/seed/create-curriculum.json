@@ -1,0 +1,28 @@
+{
+  "course": "6523753cde7fef2c8c2a91b2",
+  "title": "MERN Stack",
+  "courseDescription": "This is a test",
+
+  "content": [
+    {
+      "header": "This is a test",
+      "context": "Lorem ipsum dollet is a dummy text",
+      "videoUrl": "test.mp4"
+    },
+    {
+      "header": "This is a test",
+      "context": "Lorem ipsum dollet is a dummy text",
+      "videoUrl": "test.mp4"
+    },
+    {
+      "header": "This is a test",
+      "context": "Lorem ipsum dollet is a dummy text",
+      "videoUrl": "test.mp4"
+    },
+    {
+      "header": "This is a test",
+      "context": "Lorem ipsum dollet is a dummy text",
+      "videoUrl": "test.mp4"
+    }
+  ]
+}
