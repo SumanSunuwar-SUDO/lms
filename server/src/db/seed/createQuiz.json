@@ -1,0 +1,139 @@
+{
+  "topic": "Tailwind CSS Mastery",
+  "questions": [
+    {
+      "text": "What is the primary purpose of Tailwind CSS?",
+      "options": [
+        {
+          "text": "To provide a framework for creating animations",
+          "isCorrect": false
+        },
+        {
+          "text": "To offer utility-first classes for rapid UI development",
+          "isCorrect": true
+        },
+        {
+          "text": "To replace JavaScript for frontend interactivity",
+          "isCorrect": false
+        },
+        { "text": "To create server-side components", "isCorrect": false }
+      ],
+      "order": 1,
+      "explanation": "Tailwind CSS is a utility-first framework that provides pre-defined classes for rapid and consistent UI development."
+    },
+    {
+      "text": "What class would you use to apply padding of 4 units in Tailwind CSS?",
+      "options": [
+        { "text": "p-4", "isCorrect": true },
+        { "text": "padding-4", "isCorrect": false },
+        { "text": "pa-4", "isCorrect": false },
+        { "text": "pd-4", "isCorrect": false }
+      ],
+      "order": 2,
+      "explanation": "In Tailwind CSS, the `p-4` class applies padding on all sides with a size of 4 units."
+    },
+    {
+      "text": "Which class is used to make an element flex container in Tailwind CSS?",
+      "options": [
+        { "text": "flexbox", "isCorrect": false },
+        { "text": "flex", "isCorrect": true },
+        { "text": "container", "isCorrect": false },
+        { "text": "block", "isCorrect": false }
+      ],
+      "order": 3,
+      "explanation": "The `flex` class is used to make an element a flex container in Tailwind CSS."
+    },
+    {
+      "text": "How do you apply a background color of blue with 500 intensity in Tailwind CSS?",
+      "options": [
+        { "text": "bg-blue-500", "isCorrect": true },
+        { "text": "background-blue-500", "isCorrect": false },
+        { "text": "bg-500-blue", "isCorrect": false },
+        { "text": "blue-bg-500", "isCorrect": false }
+      ],
+      "order": 4,
+      "explanation": "The `bg-blue-500` class applies a background color of blue with intensity 500."
+    },
+    {
+      "text": "What does the `hover:bg-red-500` class do in Tailwind CSS?",
+      "options": [
+        { "text": "Changes the background to red on hover", "isCorrect": true },
+        {
+          "text": "Changes the text color to red on hover",
+          "isCorrect": false
+        },
+        { "text": "Sets the default background to red", "isCorrect": false },
+        { "text": "Sets the border color to red on hover", "isCorrect": false }
+      ],
+      "order": 5,
+      "explanation": "The `hover:bg-red-500` class changes the background color to red when the element is hovered."
+    },
+    {
+      "text": "How can you center a block element horizontally in Tailwind CSS?",
+      "options": [
+        { "text": "Use mx-auto", "isCorrect": true },
+        { "text": "Use center-x", "isCorrect": false },
+        { "text": "Use align-center", "isCorrect": false },
+        { "text": "Use text-center", "isCorrect": false }
+      ],
+      "order": 6,
+      "explanation": "The `mx-auto` class centers a block element horizontally by setting `margin-left` and `margin-right` to `auto`."
+    },
+    {
+      "text": "Which class would you use to make text bold in Tailwind CSS?",
+      "options": [
+        { "text": "font-bold", "isCorrect": true },
+        { "text": "bold", "isCorrect": false },
+        { "text": "text-bold", "isCorrect": false },
+        { "text": "font-weight-bold", "isCorrect": false }
+      ],
+      "order": 7,
+      "explanation": "The `font-bold` class makes text bold in Tailwind CSS."
+    },
+    {
+      "text": "How do you control the z-index of an element in Tailwind CSS?",
+      "options": [
+        { "text": "Use classes like z-10, z-20", "isCorrect": true },
+        { "text": "Use classes like index-10, index-20", "isCorrect": false },
+        { "text": "Use classes like layer-10, layer-20", "isCorrect": false },
+        {
+          "text": "Tailwind doesn’t support z-index control",
+          "isCorrect": false
+        }
+      ],
+      "order": 8,
+      "explanation": "In Tailwind CSS, z-index is controlled with classes like `z-10`, `z-20`, etc."
+    },
+    {
+      "text": "What is the purpose of the `group` class in Tailwind CSS?",
+      "options": [
+        {
+          "text": "To group multiple elements together in a grid",
+          "isCorrect": false
+        },
+        {
+          "text": "To enable nested states like group-hover",
+          "isCorrect": true
+        },
+        { "text": "To apply styles to all child elements", "isCorrect": false },
+        { "text": "To create a flex container", "isCorrect": false }
+      ],
+      "order": 9,
+      "explanation": "The `group` class allows applying styles to child elements based on the parent’s state, such as `group-hover`."
+    },
+    {
+      "text": "How can you extend Tailwind CSS's default spacing scale?",
+      "options": [
+        {
+          "text": "By modifying the spacing section in tailwind.config.js",
+          "isCorrect": true
+        },
+        { "text": "By using custom CSS", "isCorrect": false },
+        { "text": "By using the @extend directive", "isCorrect": false },
+        { "text": "By overriding Tailwind's core styles", "isCorrect": false }
+      ],
+      "order": 10,
+      "explanation": "You can extend the spacing scale in Tailwind by modifying the `spacing` section in `tailwind.config.js`."
+    }
+  ]
+}

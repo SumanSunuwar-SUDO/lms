@@ -19,6 +19,7 @@ const Login = () => {
         method: "POST",
         data: data,
       });
+
       setEmail("");
       setPassword("");
       setLoading(false);

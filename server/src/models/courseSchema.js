@@ -4,6 +4,7 @@ const courseSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true["Title field is required"],
+
     unique: true,
   },
   courseDescription: {
