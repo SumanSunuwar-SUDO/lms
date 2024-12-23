@@ -1,31 +1,31 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Loader from "../ui/Loader";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
+const ResetPassword = () => {
   const [password, setPassword] = useState("");
-  const [isLoading, setLoading] = useState(false);
+  const [query] = useSearchParams();
+  const token = query.get("token");
   const navigate = useNavigate();
+  const [isLoading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { email, password };
-    setLoading(true);
     try {
+      const data = { password };
+      setLoading(true);
       let result = await axios({
-        url: `http://localhost:1111/user/login`,
+        url: "http://localhost:1111/user/reset-password",
         method: "POST",
         data: data,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
-      setEmail("");
-      setPassword("");
+      navigate("/login");
       setLoading(false);
-      navigate("/profile");
     } catch (error) {
-      setEmail("");
-      setPassword("");
       setLoading(false);
     }
   };
@@ -35,47 +35,30 @@ const Login = () => {
       <section className="login-section">
         <div className="login-div">
           <span className="px-4">
-            <h1 className="text-xl font-semibold">LOGIN</h1>
+            <h1 className="text-xl font-semibold">Forgot your password?</h1>
             <span className="text-[14px] font-normal text-gray-500 flex justify-between">
-              <p>SIGN IN YOUR ACCOUNT</p>
-              <Link className="text-blue-500" to={"/signup"}>
-                Sign Up
-              </Link>
+              <p>Enter a new password</p>
             </span>
           </span>
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <input
-            type="email"
-            placeholder="Your e-mail"
-            className="form-input"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <input
             type="password"
-            placeholder="Password"
+            placeholder="New Password"
             className="form-input"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
+
           <button type="submit" className="form-button">
-            {isLoading ? <Loader /> : "Login"}
+            {isLoading ? <Loader /> : "Reset"}
           </button>
-          <NavLink
-            to={"/forgot-password"}
-            className={"self-center text-slate-400"}
-          >
-            Forgot Password?
-          </NavLink>
         </form>
       </section>
     </main>
   );
 };
 
-export default Login;
+export default ResetPassword;
