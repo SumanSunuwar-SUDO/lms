@@ -4,12 +4,12 @@ const courseSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true["Title field is required"],
-
     unique: true,
   },
   courseDescription: {
     type: String,
     required: true["Course description field is required"],
+    unique: true,
   },
   instructor: {
     type: String,
@@ -31,8 +31,10 @@ const courseSchema = new mongoose.Schema({
     unique: true,
   },
   students: [{ type: mongoose.Schema.ObjectId, ref: "User" }],
-  assignments: [{ type: mongoose.Schema.ObjectId, ref: "Assignment" }],
-  quiz: [{ type: mongoose.Schema.ObjectId, ref: "Quiz" }],
+  image: {
+    type: String,
+    required: true,
+  },
 });
 
 export const Course = mongoose.model("Course", courseSchema);

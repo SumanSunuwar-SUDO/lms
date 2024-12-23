@@ -9,6 +9,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { email, password };
+    setIsLoading(true);
     try {
       let result = await axios({
         url: `http://localhost:1111/user/login`,

@@ -1,5 +1,5 @@
 import "./App.css";
-import MyRoutes from "./routes/myRoutes";
+import MyRoutes from "./routes/MyRoutes";
 
 function App() {
   return (

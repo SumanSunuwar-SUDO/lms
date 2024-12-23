@@ -24,11 +24,21 @@ const curriculumSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      objective: {
+        type: Array,
+        required: true,
+      },
       videoUrl: {
         type: String,
       },
     },
   ],
+
+  quiz: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Quiz",
+    required: true,
+  },
 });
 
 export const Curriculum = mongoose.model("Curriculum", curriculumSchema);
