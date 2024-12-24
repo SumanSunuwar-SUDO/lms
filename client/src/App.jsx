@@ -1,5 +1,6 @@
 import "./App.css";
-import MyRoutes from "./routes/myRoutes";
+import NavBar from "./layout/NavBar";
+import MyRoutes from "./routes/MyRoutes";
 
 function App() {
   return (
