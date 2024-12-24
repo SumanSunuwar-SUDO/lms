@@ -1,10 +1,10 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Login from "../pages/login";
-import Signup from "../pages/Signup";
-import Verify from "../pages/Verify";
-import ForgotPassword from "../pages/ForgotPassword";
-import ResetPassword from "../pages/Reset-password";
+import { Route, Routes } from "react-router-dom";
+import Login from "../pages/Auth/Login";
+import Signup from "../pages/Auth/Signup";
+import Verify from "../pages/Auth/Verify";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
+import ResetPassword from "../pages/Auth/Reset-password";
 const MyRoutes = () => {
   return (
     <div>

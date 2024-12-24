@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Loader from "../ui/Loader";
+import Loader from "../../ui/Loader";
+import { SignInWithGoogle } from "./SignInWithGoogle";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -74,6 +75,7 @@ const Login = () => {
             Forgot Password?
           </NavLink>
         </form>
+        <SignInWithGoogle></SignInWithGoogle>
       </section>
     </main>
   );

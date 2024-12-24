@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Loader from "../ui/Loader";
+import Loader from "../../ui/Loader";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ const ForgotPassword = () => {
       <section className="login-section">
         <div className="login-div">
           <span className="px-4">
-            <h1 className="text-xl font-semibold">Forgot your password?</h1>
+            <h1 className="text-xl font-semibold">Reset your password?</h1>
             <span className="text-[14px] font-normal text-gray-500 flex justify-between">
               <p>Please enter the email you use to sign in</p>
             </span>

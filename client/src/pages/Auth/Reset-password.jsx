@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Loader from "../ui/Loader";
+import Loader from "../../ui/Loader";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");

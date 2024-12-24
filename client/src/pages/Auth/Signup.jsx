@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Loader from "../ui/Loader";
+import Loader from "../../ui/Loader";
+import { SignInWithGoogle } from "./SignInWithGoogle";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -89,6 +90,8 @@ const Signup = () => {
             {isLoading ? <Loader /> : "Signup"}
           </button>
         </form>
+
+        <SignInWithGoogle></SignInWithGoogle>
       </section>
     </main>
   );
