@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
-import Login from "../pages/login";
 import Signup from "../pages/Signup";
 import Verify from "../pages/Verify";
 import ForgotPassword from "../pages/ForgotPassword";
 import ResetPassword from "../pages/Reset-password";
 import Home from "../components/Home";
 import Admin from "../pages/admin/Admin";
+import Login from "../pages/Login";
 const MyRoutes = () => {
   return (
     <div>
