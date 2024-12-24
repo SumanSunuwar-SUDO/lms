@@ -24,12 +24,6 @@ const courseSchema = new mongoose.Schema({
     required: true["Level field is required"],
     enum: ["Beginner", "Intermediate", "Advanced"],
   },
-  curriculum: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Curriculum",
-    required: true,
-    unique: true,
-  },
   students: [{ type: mongoose.Schema.ObjectId, ref: "User" }],
   image: {
     type: String,

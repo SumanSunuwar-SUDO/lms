@@ -2,6 +2,7 @@ import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../../layout/NavBar";
 
 const Course = () => {
   const [course, setCourse] = useState([]);

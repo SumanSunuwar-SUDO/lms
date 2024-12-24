@@ -11,7 +11,7 @@
 }
 
 .form-button {
-  @apply h-[35px] w-[100px] bg-slate-500 self-center text-white rounded-md;
+  @apply h-[35px] w-[150px] bg-slate-500 self-center text-white rounded-md flex justify-center items-center;
 }
 
 .login-main {

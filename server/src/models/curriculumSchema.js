@@ -33,12 +33,6 @@ const curriculumSchema = new mongoose.Schema({
       },
     },
   ],
-
-  quiz: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Quiz",
-    required: true,
-  },
 });
 
 export const Curriculum = mongoose.model("Curriculum", curriculumSchema);
