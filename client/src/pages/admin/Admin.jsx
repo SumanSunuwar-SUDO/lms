@@ -74,31 +74,37 @@ function Admin() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="p-4 text-white bg-blue-600">
-        <h1 className="text-xl">Admin Panel</h1>
-      </header>
       <div className="flex flex-1">
-        <aside className="w-64 p-4 text-white bg-gray-800">
+        <aside className="w-64 py-4 text-white bg-gray-800">
+          <h1 className="center font-bold text-xl text-blue-600">
+            Admin Panel
+          </h1>
           <nav>
-            <ul>
-              <li className="mb-2">
+            <ul className="center flex-col gap-5 mt-14  w-full  ">
+              <li className="mb-2 shadow h-[35px] w-full  center">
                 <a href="/dashboard" className="hover:underline">
-                  Dashboard
+                  Add Course
                 </a>
               </li>
-              <li className="mb-2">
+              <li className="mb-2 shadow h-[35px] w-full  center">
                 <a href="/admin-dashboard/users" className="hover:underline">
                   Users
                 </a>
               </li>
-              <li className="mb-2">
+              <li className="mb-2 shadow h-[35px] w-full  center">
                 <a href="/settings" className="hover:underline">
-                  Settings
+                  Update Course
                 </a>
               </li>
-              <li className="mb-2">
+              <li className="mb-2 shadow h-[35px] w-full  center">
                 <a href="/courses" className="hover:underline">
-                  See all Courses
+                  Assignments
+                </a>
+              </li>
+
+              <li className="mb-2 shadow h-[35px] w-full  center">
+                <a href="/courses" className="hover:underline">
+                  Settings
                 </a>
               </li>
             </ul>

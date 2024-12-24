@@ -25,3 +25,7 @@
 .login-div {
   @apply flex flex-col justify-center py-5 border border-transparent border-b-gray-300;
 }
+
+.center {
+  @apply flex justify-center items-center;
+}

@@ -24,6 +24,10 @@ const curriculumSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      objective: {
+        type: Array,
+        required: true,
+      },
       videoUrl: {
         type: String,
       },

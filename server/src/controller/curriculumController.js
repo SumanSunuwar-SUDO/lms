@@ -37,3 +37,33 @@ export const addContentController = async (req, res, next) => {
     });
   }
 };
+
+export const getCurriculumController = async (req, res, next) => {
+  const { course } = req.query;
+  try {
+    const result = await Curriculum.find({ course });
+    res.status(200).json(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+export const getContentController = async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const result = await Curriculum.findOne(
+      { "content._id": id },
+      { "content.$": 1 }
+    );
+
+    if (!result || !result.content || result.content.length === 0) {
+      return res.status(404).json({ message: "Content not found" });
+    }
+
+    res.status(200).json(result.content[0]);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};

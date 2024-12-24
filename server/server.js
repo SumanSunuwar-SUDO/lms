@@ -21,7 +21,7 @@ server.use("/user", userRouter);
 server.use("/course", courseRouter);
 server.use("/curriculum", curriculumRouter);
 server.use("/quiz", quizRouter);
-server.use("/assignments", assignmentRouter)
+server.use("/assignments", assignmentRouter);
 
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
