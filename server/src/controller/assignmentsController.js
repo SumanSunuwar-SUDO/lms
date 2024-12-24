@@ -5,10 +5,6 @@ export const createAssignmentsController = async (req, res, next) => {
     try {
         const data = req.body;
 
-        console.log(data.courses);
-
-
-
         const results = await Assignment.create(data)
 
         res.status(201).json({
