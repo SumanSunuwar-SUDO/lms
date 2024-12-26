@@ -46,7 +46,7 @@ export const createUserController = async (req, res, next) => {
       data: user,
     });
   } catch (error) {
-    res.status(400).json({
+    res.status(404).json({
       success: false,
       message: error.message,
     });

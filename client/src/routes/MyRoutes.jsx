@@ -6,12 +6,25 @@ import AddCurriculum from "../components/AddCurriculum";
 import NavBar from "../layout/NavBar";
 import Course from "../pages/(main)/Course";
 import Coursecurriculum from "../pages/(main)/course-curriculum";
+import { Route, Routes } from "react-router-dom";
+import Login from "../pages/Auth/Login";
+import Signup from "../pages/Auth/Signup";
+import Verify from "../pages/Auth/Verify";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
+import ResetPassword from "../pages/Auth/Reset-password";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Signup from "../pages/Signup";
+import Verify from "../pages/Verify";
 import ForgotPassword from "../pages/ForgotPassword";
 import Login from "../pages/Login";
 import ResetPassword from "../pages/Reset-password";
 import Signup from "../pages/Signup";
 import Verify from "../pages/Verify";
 import Admin from "../pages/admin/Admin";
+import Login from "../pages/Login";
+import Course from "../pages/(main)/Course";
+import Coursecurriculum from "../pages/(main)/course-curriculum";
+import NavBar from "../layout/NavBar";
 const MyRoutes = () => {
   return (
     <div>
