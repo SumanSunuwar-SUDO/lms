@@ -1,28 +1,31 @@
 {
   "course": "6523753cde7fef2c8c2a91b2",
-  "title": "MERN Stack",
-  "courseDescription": "This is a test",
-
+  "title": "Introduction to Tailwind CSS",
+  "courseDescription": "This course introduces you to Tailwind CSS, a utility-first framework for rapid and consistent UI development. It covers essential concepts and prepares you for practical implementation.",
   "content": [
     {
-      "header": "This is a test",
-      "context": "Lorem ipsum dollet is a dummy text",
-      "videoUrl": "test.mp4"
+      "header": "What is Tailwind CSS?",
+      "context": "Tailwind CSS is a utility-first CSS framework designed to simplify UI development by providing pre-defined classes that allow you to build responsive and consistent designs without writing custom CSS.",
+      "videoUrl": "https://youtu.be/6LhRLZ5_IgI?si=vW__1XWkOWGY4WZv"
     },
     {
-      "header": "This is a test",
-      "context": "Lorem ipsum dollet is a dummy text",
-      "videoUrl": "test.mp4"
+      "header": "Why Use Tailwind CSS?",
+      "context": "Tailwind CSS enables faster development and ensures design consistency by using utility classes. It provides flexibility and eliminates the need to manage custom CSS files."
     },
     {
-      "header": "This is a test",
-      "context": "Lorem ipsum dollet is a dummy text",
-      "videoUrl": "test.mp4"
+      "header": "Installing Tailwind CSS",
+      "context": "Step-by-step guide to setting up Tailwind CSS using npm or CDN. Understand how to integrate it with your project and verify that the setup is working.",
+      "videoUrl": "https://youtu.be/arftp8kFBBg?si=PKdSOtNldscIxW25"
     },
     {
-      "header": "This is a test",
-      "context": "Lorem ipsum dollet is a dummy text",
-      "videoUrl": "test.mp4"
+      "header": "Utility-First Framework",
+      "context": "Learn about the utility-first approach and how it differs from traditional CSS frameworks. Discover how Tailwind's utilities can be combined to create custom designs efficiently.",
+      "videoUrl": "https://youtu.be/O01fO1MY69Y?si=1dr3dY0g5ro3I9YT"
+    },
+    {
+      "header": "Core Features of Tailwind CSS",
+      "context": "Explore the key features of Tailwind CSS, including responsive design utilities, customizable themes, and a large collection of pre-defined classes for layout, spacing, and typography.",
+      "videoUrl": "https://youtu.be/vlVrzWLRDLg?si=RsphhVNF_uxeHXei"
     }
   ]
 }

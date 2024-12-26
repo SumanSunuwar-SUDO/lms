@@ -2,25 +2,23 @@ import { Assignment } from "../models/assignmentModel.js";
 import { Course } from "../models/courseSchema.js";
 
 export const createAssignmentsController = async (req, res, next) => {
-    try {
-        const data = req.body;
+  try {
+    const data = req.body;
 
-        const results = await Assignment.create(data)
+    console.log(data.courses);
 
-        res.status(201).json({
-            success: true,
-            message: "Assignments created successfully",
-            data: results
-        })
+    const results = await Assignment.create(data);
 
-
-
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: "Failed to create assignments",
-            error: error.message
-        })
-
-    }
-}
+    res.status(201).json({
+      success: true,
+      message: "Assignments created successfully",
+      data: results,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Failed to create assignments",
+      error: error.message,
+    });
+  }
+};

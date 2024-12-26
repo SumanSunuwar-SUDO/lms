@@ -9,6 +9,7 @@ const courseSchema = new mongoose.Schema({
   courseDescription: {
     type: String,
     required: true["Course description field is required"],
+    unique: true,
   },
   instructor: {
     type: String,
@@ -23,15 +24,11 @@ const courseSchema = new mongoose.Schema({
     required: true["Level field is required"],
     enum: ["Beginner", "Intermediate", "Advanced"],
   },
-  curriculum: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Curriculum",
-    required: true,
-    unique: true,
-  },
   students: [{ type: mongoose.Schema.ObjectId, ref: "User" }],
-  assignments: [{ type: mongoose.Schema.ObjectId, ref: "Assignment" }],
-  quiz: [{ type: mongoose.Schema.ObjectId, ref: "Quiz" }],
+  image: {
+    type: String,
+    required: true,
+  },
 });
 
 export const Course = mongoose.model("Course", courseSchema);

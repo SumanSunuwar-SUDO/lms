@@ -1,11 +1,10 @@
 import "./App.css";
 import NavBar from "./layout/NavBar";
-import MyRoutes from "./routes/myRoutes";
+import MyRoutes from "./routes/MyRoutes";
 
 function App() {
   return (
     <>
-      <NavBar />
       <MyRoutes />
     </>
   );

@@ -25,3 +25,23 @@
 .login-div {
   @apply flex flex-col justify-center py-5 border border-transparent border-b-gray-300;
 }
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.input {
+  @apply px-1 py-2 border border-gray-900 outline-none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
