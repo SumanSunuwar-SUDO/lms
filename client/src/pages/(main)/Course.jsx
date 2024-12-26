@@ -1,8 +1,6 @@
 import axios from "axios";
-import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../layout/NavBar";
 
 const Course = () => {
   const [course, setCourse] = useState([]);
@@ -25,7 +23,7 @@ const Course = () => {
     handleSubmit();
   }, []);
   return (
-    <div className="center h-screen w-full">
+    <div className="w-full h-screen center">
       {course.map((value, index) => {
         return (
           <div

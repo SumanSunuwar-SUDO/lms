@@ -7,6 +7,7 @@ const quizSchema = new mongoose.Schema(
       ref: "Curriculum",
       required: true,
     },
+
     topic: {
       type: String,
       required: true,
